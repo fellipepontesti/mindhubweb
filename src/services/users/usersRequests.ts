@@ -6,7 +6,6 @@ import { redirect } from "next/navigation"
 export async function getUsers (): Promise<any> {
   const { user, refreshToken } = useAuth()
 
-  console.log(user, 'AuthData ----<')
   try {
     const res = await fetch("http://localhost:8000/users", {
       headers: {

@@ -50,8 +50,6 @@ export default async function RootLayout({
 async function checkUserLogged () {
   const session = await auth()
 
-  console.log(session?.user, 'checklogged')
-
   if (!session) {
     return redirect('/')
   }
